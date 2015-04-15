@@ -19,7 +19,7 @@ BroadcastReceiver虽然是一个监听器，但是它和之前用到的OnXxxList
 
 普通广播：Normal Broadcase，它是完全异步的，也就是说，在逻辑上，当一个Broadcast被发出之后，所有的与之匹配的BroadcastReceiver都同时接收到Broadcast。优点是传递效率比较高，但是也有缺点，就是一个BroadcastReceiver不能影响其他响应这条Broadcast的BroadcastReceiver。
 
-有序广播：Ordered Broadcast，它是同步执行的，也就是说有序广播的接收器将会按照预先声明的优先级依次接受Broadcast，是链式结构，优先级越高（-1000~1000），越先被执行。因为是顺序执行，所有优先级高的接收器，可以把执行结果传入下一个接收器中，也可以终止Broadcast的传播（通过abortBroadcast()方法），一旦Broadcast的传播被终止，优先级低于它的接收器就不会再接收到这条Broadcast了。
+有序广播：Ordered Broadcast，它是同步执行的，也就是说有序广播的接收器将会按照预先声明的优先级依次接受Broadcast，是链式结构，优先级越高（-1000~1000），越先被执行。因为是顺序执行，所有优先级高的接收器，可以把执行结果传入下一个接收器中，也可以终止Broadcast的传播（通过abortBroadcast()方法），一旦Broadcast的传播被终止，优先级低于它的接收器就不会再接收到这条Broadcast了。Android默认系统优先级是0。
 　　虽然系统存在两种类型的Broadcast，但是一般系统发送出来的Broadcast均是有序广播，所以可以通过优先级的控制，在系统内置的程序响应前，对Broadcast提前进行响应。这就是市场上一些拦截器类（如：短信拦截器、电话拦截器）的软件的原理。
 　　
 ###summary
@@ -65,3 +65,9 @@ BroadcastReceiver本质上还是一个监听器，所以使用BroadcastReceiver�
 - 继承BroadcastReceiver,重写onReceiver(Context context,Intent intent)
 - 静态注册，写在AndroidManifest.xml文件中
 - 动态注册，使用Content.register(BroadcastReceiver receiver,IntentFilter filter)以及Content.unregisterReceiver(BroadcastReceiver receiver)
+
+
+
+
+## References
+- http://www.cnblogs.com/plokmju/p/android_broadcastreceiver.html
