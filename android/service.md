@@ -26,7 +26,7 @@ when you extends Service,you must override onBind() method
 
 ## Life Cycle
 
-
+![](https://github.com/fengcj/read_note/blob/master/android/service.png)
 
 
 
