@@ -8,6 +8,7 @@
 ## UML
 ![](https://github.com/fengcj/read_note/blob/master/android/context.png)
 
+- The real class which implement `Content` is `ContentImpl`.
 
 
 
