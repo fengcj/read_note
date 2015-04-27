@@ -10,6 +10,9 @@
 
 
 
+## 架构
+
+![](https://github.com/fengcj/read_note/tree/master/android/ActivityManagerService.gif)
 
 
 
