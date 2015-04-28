@@ -49,3 +49,4 @@ SurfaceHolder.unlockCanvasAndPost(Canvas canvas)结束锁定画图，并提交�
 
 ## 引用
 http://www.cnblogs.com/devinzhang/archive/2012/02/03/2337559.html
+http://blog.csdn.net/tianfeng701/article/details/7601704
