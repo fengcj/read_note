@@ -20,9 +20,39 @@
         return true;
     }
     
-    
-    
 
+
+## GestureOverlayView
+ - this class extends from `android.widget.FrameLayout`
+ - it is a **transparent overlay** for gesture input that can be palced on top of other widgets or contains other widgets
+ - if you want use this, you need implement `OnGesturePerformedListener` to override `onGesturePerformed(GestureOverlayView overlay,Gesture gesture)` method
+ - at the same time, you need use gesture library to load the gesture(R.raw.gesture) which defined by your self
+ 
+### code example
+    
+     public class YourClass extends Activity implements OnGesturePerformedListener {
+
+        private GestureLibrary mLibrary;
+        mLibrary = GestureLibraries.fromRawResource(this, R.raw.gestures);
+        if (!mLibrary.load()) {
+            finish();
+        }
+        GestureOverlayView gestures =    (GestureOverlayView)findViewById(R.id.gestures);
+        gestures.addOnGesturePerformedListener(this);
+
+        public void onGesturePerformed(GestureOverlayView overlay, Gesture gesture) {
+            ArrayList<Prediction> predictions = mLibrary.recognize(gesture);
+            Log.v("performed","performed");
+            // We want at least one prediction
+            if (predictions.size() > 0) {
+                Prediction prediction = predictions.get(0);
+                // We want at least some confidence in the result
+                if (prediction.score > 1.0) {
+                    if(prediction.name.equalsIgnorecase("right")){
+                      //do you thing here//
+                      }
+        }
 
 ## Reference
 - http://www.tutorialspoint.com/android/android_gestures.htm
+- http://stackoverflow.com/questions/5434258/using-a-gesture-overlay-view-in-android
