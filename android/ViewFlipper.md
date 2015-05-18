@@ -14,4 +14,4 @@
 
 ## Code Excample
 - http://examples.javacodegeeks.com/android/core/widget/viewflipper/android-viewflipper-example/#code
-- 
+- http://stackoverflow.com/questions/13031558/android-viewflipper-or-viewpager-which-is-better-option
