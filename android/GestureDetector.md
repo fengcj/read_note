@@ -26,7 +26,7 @@
  - this class extends from `android.widget.FrameLayout`
  - it is a **transparent overlay** for gesture input that can be palced on top of other widgets or contains other widgets
  - if you want use this, you need implement `OnGesturePerformedListener` to override `onGesturePerformed(GestureOverlayView overlay,Gesture gesture)` method
- - at the same time, you need use gesture library to load the gesture(R.raw.gesture) which defined by your self
+ - at the same time, you need use gesture library to load the gesture(R.raw.gesture) file which defined by your self by using "GestureBuilder"
  
 ### code example
     
