@@ -56,3 +56,5 @@
 ## Reference
 - http://www.tutorialspoint.com/android/android_gestures.htm
 - http://stackoverflow.com/questions/5434258/using-a-gesture-overlay-view-in-android
+- http://www.vogella.com/tutorials/AndroidGestures/article.html
+- http://stackoverflow.com/questions/15038335/how-to-add-our-own-gestures-in-android
