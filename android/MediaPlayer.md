@@ -4,4 +4,4 @@
 
 #### State Diagram
 
-![]()
+![](https://github.com/fengcj/read_note/blob/master/android/mediaplayer_state_diagram.gif)
